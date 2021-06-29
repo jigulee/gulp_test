@@ -315,6 +315,7 @@
 							margin-right: 50px;
 							cursor: pointer;
 							margin-bottom: 30px;
+
 							&:nth-of-type(3n) {
 								margin-right: 0;
 							}
@@ -343,11 +344,15 @@
 									center/cover;
 							}
 
-							.pic {
-								width: 100%;
-								height: 200px;
-								background: #555;
+							.picbox {
+								overflow: hidden;
+								.pic {
+									width: 100%;
+									height: 200px;
+									transition: 0.5s;
+								}
 							}
+
 							> h1 {
 								padding: 20px 0 30px;
 								a {
@@ -359,6 +364,15 @@
 								font: 13px/1 "맑은 고딕";
 								color: #aaa;
 								letter-spacing: 1px;
+							}
+							&:hover {
+								.pic {
+									transform: scale(1.2);
+								}
+								h1 a,
+								p {
+									color: #0069c0;
+								}
 							}
 						}
 						span {
@@ -388,15 +402,67 @@
 							width: 360px;
 							height: 210px;
 							margin-right: 50px;
+							cursor: pointer;
 
 							&.pic1 {
 								background: url(../img/9.jpg) no-repeat
 									center/cover;
+								position: relative;
+								&::after {
+									content: "";
+									display: block;
+									width: 100%;
+									height: 100%;
+									position: absolute;
+									top: 0;
+									left: 0;
+									background: rgba(255, 255, 255, 0.4);
+									opacity: 0;
+									transition: 0.5s;
+								}
+								> h2 {
+									position: relative;
+									top: 50%;
+									transform: translateY(-50%);
+									text-align: center;
+									opacity: 0;
+									a {
+										font: bold 20px/1 "맑은 고딕";
+										letter-spacing: 1px;
+										color: #004ba0;
+									}
+								}
 							}
 
 							&.pic2 {
 								background: url(../img/8.jpg) no-repeat
 									center/cover;
+								position: relative;
+								&::after {
+									content: "";
+									display: block;
+									width: 100%;
+									height: 100%;
+									position: absolute;
+									top: 0;
+									left: 0;
+									background: rgba(255, 255, 255, 0.4);
+									opacity: 0;
+									transition: 0.5s;
+								}
+								> h2 {
+									position: relative;
+									top: 50%;
+									transform: translateY(-50%);
+									text-align: center;
+									opacity: 0;
+									transition: 0.5s;
+									a {
+										font: bold 20px/1 "맑은 고딕";
+										letter-spacing: 1px;
+										color: #004ba0;
+									}
+								}
 							}
 
 							&:nth-of-type(3) {
@@ -417,6 +483,26 @@
 							p {
 								font: 18px/1.8 "맑은 고딕";
 							}
+						}
+					}
+
+					.news2:hover {
+						.pic1::after {
+							opacity: 1;
+						}
+						.pic1 h2 {
+							opacity: 1;
+							z-index: 3;
+						}
+					}
+
+					.news3:hover {
+						.pic2::after {
+							opacity: 1;
+						}
+						.pic2 h2 {
+							opacity: 1;
+							z-index: 3;
 						}
 					}
 

@@ -375,9 +375,10 @@ $mobile: 539px;
 						}
 						> .pic {
 							width: 600px;
-							height: 190px;
+							height: 200px;
 							float: right;
-							background: url(../img/8.jpg) no-repeat center/cover;
+							background: url(../img/18.jpg) no-repeat
+								center/cover;
 							position: relative;
 							top: -10px;
 						}
@@ -454,6 +455,7 @@ $mobile: 539px;
 					.sub5 {
 						padding: 20px 25px;
 						box-sizing: border-box;
+						//display: block;
 						h1 {
 							font: normal 16px/1 arial;
 							padding-bottom: 10px;
@@ -466,7 +468,8 @@ $mobile: 539px;
 							height: 200px;
 							float: left;
 							cursor: pointer;
-							background: url(../img/9.jpg) no-repeat center/cover;
+							background: url(../img/news3.jpg) no-repeat
+								center/cover;
 							margin-right: 20px;
 							opacity: 0.9;
 						}

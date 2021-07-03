@@ -261,7 +261,7 @@
             $("<aside class='pop'>")
                 .css({
                     width: '100%', height: "100%", position: "fixed", top: 0, left: 0, zIndex: 10,
-                    boxSizing: "border-box", padding: "3vw", background: "#fff", display: "none"
+                    boxSizing: "border-box", padding: "3vw", background: "rgba(255,255,255,0.8)", display: "none"
                 })
                 .append(
                     $("<img>").attr("src", imgSrc).css({

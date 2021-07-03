@@ -745,7 +745,7 @@ textarea {
       #sub_footer .loewr .inner .sns li a {
         color: #888; } }
 .defartment {
-  padding: 100px 0px 200px; }
+  padding: 0px 0px 250px; }
   .defartment .inner .wrap {
     width: 100%;
     /*
@@ -764,7 +764,7 @@ textarea {
     	}
     }
     */ }
-    .defartment .inner .wrap p {
+    .defartment .inner .wrap > p {
       font: 40px/1 arial;
       text-align: center;
       margin-top: 50px;
@@ -788,12 +788,12 @@ textarea {
       letter-spacing: 1px;
       text-align: center; }
     .defartment .inner .wrap .pic1 {
-      width: 400px;
+      width: 300px;
       margin: 0 auto;
       margin-bottom: 20px; }
       .defartment .inner .wrap .pic1 div {
         width: 100%;
-        height: 400px;
+        height: 300px;
         background: url(../img/people13.jpg) no-repeat center/cover;
         border-radius: 50%;
         margin-bottom: 10px; }
@@ -805,16 +805,16 @@ textarea {
         clear: both; }
       .defartment .inner .wrap .pic2 p {
         font: 20px/1 arial;
-        color: #555;
+        color: #111;
         text-align: center;
         padding: 15px;
         border-top: 2px solid #222;
         border-bottom: 2px solid #111;
         margin-bottom: 40px; }
       .defartment .inner .wrap .pic2 article {
-        width: 380px;
+        width: 370px;
         float: left;
-        margin-right: 20px;
+        margin-right: 35px;
         position: relative;
         /*
         &::after {
@@ -846,8 +846,8 @@ textarea {
         .defartment .inner .wrap .pic2 article:nth-of-type(3) {
           margin-right: 0px; }
         .defartment .inner .wrap .pic2 article div {
-          width: 300px;
-          height: 300px;
+          width: 280px;
+          height: 280px;
           border-radius: 50%;
           margin: 0 auto; }
         .defartment .inner .wrap .pic2 article:nth-of-type(1) div {

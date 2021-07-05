@@ -1184,28 +1184,7 @@ textarea {
         border-bottom: 2px solid #e2f1f8;
         box-sizing: border-box; }
         .community .inner #tab dt:nth-of-type(1) {
-          left: calc((100% / 2) * 0);
-          /*
-          &::after {
-          	content: "";
-          	display: block;
-          	width: 1180px;
-          	height: 1px;
-          	background: #eee;
-          	position: absolute;
-          	bottom: 0;
-          	left: 0;
-          }
-          &::before {
-          	content: "";
-          	display: block;
-          	width: 1180px;
-          	height: 1px;
-          	background: #eee;
-          	position: absolute;
-          	top: 0;
-          	left: 0;
-          }*/ }
+          left: calc((100% / 2) * 0); }
         .community .inner #tab dt:nth-of-type(2) {
           left: calc((100% / 2) * 1); }
         .community .inner #tab dt a {
@@ -1222,15 +1201,14 @@ textarea {
             border-radius: 15px 15px 0 0; }
       .community .inner #tab dd {
         width: 100%;
-        padding-top: 100px;
-        box-sizing: border-box;
         display: none;
         position: absolute;
         top: 60px;
-        left: 0; }
+        left: 0;
+        margin-top: 100px;
+        box-sizing: border-box; }
         .community .inner #tab dd#tab1 {
-          display: block;
-          margin-top: 10px; }
+          display: block; }
           .community .inner #tab dd#tab1 .search_box {
             width: 100%;
             height: 60px;
@@ -1291,8 +1269,10 @@ textarea {
                 color: #555;
                 background: #fff;
                 letter-spacing: 1px; }
-                .community .inner #tab dd#tab1 table tr th:last-child {
-                  padding-left: 30px; }
+                .community .inner #tab dd#tab1 table tr th:first-child {
+                  padding-left: 55px;
+                  text-align: left;
+                  width: 10%; }
               .community .inner #tab dd#tab1 table tr td {
                 padding: 35px;
                 font: 12px/1.6 arial;
@@ -1300,11 +1280,13 @@ textarea {
                 letter-spacing: 1px;
                 transition: 3s;
                 cursor: pointer; }
-                .community .inner #tab dd#tab1 table tr td:first-child {
+                .community .inner #tab dd#tab1 table tr td:nth-child(1) {
                   padding-left: 55px;
                   font-weight: bold; }
-                .community .inner #tab dd#tab1 table tr td:last-child {
-                  text-align: right; }
+                .community .inner #tab dd#tab1 table tr td:nth-child(2) {
+                  padding-left: 50px; }
+                .community .inner #tab dd#tab1 table tr td:nth-child(3) {
+                  width: 10%; }
                 .community .inner #tab dd#tab1 table tr td a {
                   font-size: 14px;
                   color: #333; }
@@ -1313,7 +1295,7 @@ textarea {
           .community .inner #tab dd#tab1 .pagination {
             width: 100%;
             text-align: center;
-            margin-top: 20px; }
+            margin-top: 40px; }
             .community .inner #tab dd#tab1 .pagination .numbers {
               font-size: 0;
               display: inline-block; }
@@ -1574,155 +1556,271 @@ textarea {
 
 /* Tablet */
 @media screen and (max-width: 1179px) {
-  .community .inner {
-    width: 100%;
-    padding: 0 30px;
-    box-sizing: border-box; }
-    .community .inner .sub_visual h1 {
-      font-size: 50px;
-      padding-top: 70px; }
-    .community .inner .sub_visual {
-      height: 150px; }
-    .community .inner .wrap .search_box p {
-      padding-top: 35px; }
-    .community .inner .wrap .search_box select {
-      top: 14px;
-      right: 270px;
-      width: 80px;
-      height: 35px;
-      padding-left: 20px; }
-    .community .inner .wrap .search_box input[type="search"] {
-      top: 14px;
-      right: 65px;
-      width: 200px;
-      height: 35px; }
-    .community .inner .wrap .search_box input[type="submit"] {
-      top: 12px;
-      width: 60px;
-      height: 38px;
-      font: 13px/38px arial; }
-    .community .inner .wrap table tr th {
-      padding: 15px 0; }
-      .community .inner .wrap table tr th:first-child {
-        padding-left: 15px; }
-      .community .inner .wrap table tr th:last-child {
-        padding-right: 20px; }
-    .community .inner .wrap table tr td {
-      padding: 25px; }
-      .community .inner .wrap table tr td:first-child {
-        padding-left: 30px; }
-    .community .inner .box3 {
-      padding-top: 80px; }
-      .community .inner .box3 span {
-        font-size: 13px;
-        padding-left: 5px; }
-      .community .inner .box3 .box1 {
-        height: 130px;
-        padding: 25px; }
-        .community .inner .box3 .box1::after {
-          width: 70%;
-          top: 60px;
-          left: 30px; }
-        .community .inner .box3 .box1 a {
-          width: 110px;
-          height: 35px;
-          font: bold 13px/35px arial;
-          padding-left: 10px;
-          top: 80px;
-          left: 30px; }
-      .community .inner .box3 .box2 {
-        height: 130px;
-        padding: 25px; }
-        .community .inner .box3 .box2::after {
-          width: 70%;
-          top: 60px;
-          left: 30px; }
-        .community .inner .box3 .box2 > div {
-          width: 200px;
-          height: 35px;
-          top: 80px;
-          left: 30px; }
-          .community .inner .box3 .box2 > div p {
-            font: bold 13px/35px arial;
-            padding-left: 10px; }
-      .community .inner .box3 h1 {
-        font: bold 15px/1 "맑은 고딕"; } }
+  .community {
+    padding: 10px 0 150px; }
+    .community .inner {
+      width: 100%; }
+      .community .inner #tab {
+        height: 1300px; }
+        .community .inner #tab dt {
+          height: 50px;
+          top: 30px; }
+          .community .inner #tab dt a {
+            font: 14px/50px "맑은 고딕"; }
+        .community .inner #tab dd {
+          margin-top: 100px; }
+          .community .inner #tab dd#tab1 .wrap .search_box {
+            height: 50px; }
+            .community .inner #tab dd#tab1 .wrap .search_box select {
+              right: 300px;
+              width: 80px;
+              height: 35px; }
+            .community .inner #tab dd#tab1 .wrap .search_box input[type="search"] {
+              width: 220px;
+              height: 35px; }
+            .community .inner #tab dd#tab1 .wrap .search_box input[type="submit"] {
+              top: -1px;
+              width: 70px;
+              height: 37px;
+              font: 13px/37px arial; }
+          .community .inner #tab dd#tab1 .wrap table {
+            padding-top: 30px; }
+            .community .inner #tab dd#tab1 .wrap table tr th {
+              padding: 15px 30px; }
+            .community .inner #tab dd#tab1 .wrap table tr td {
+              padding: 25px; }
+          .community .inner #tab dd#tab1 .wrap .box3 {
+            padding-top: 80px; }
+            .community .inner #tab dd#tab1 .wrap .box3 .box1 {
+              height: 130px;
+              padding: 20px; }
+              .community .inner #tab dd#tab1 .wrap .box3 .box1 > h1 {
+                font-size: 14px; }
+              .community .inner #tab dd#tab1 .wrap .box3 .box1 span {
+                font-size: 12px;
+                padding-left: 5px; }
+              .community .inner #tab dd#tab1 .wrap .box3 .box1::after {
+                width: 80%;
+                top: 55px;
+                left: 20px; }
+              .community .inner #tab dd#tab1 .wrap .box3 .box1 a {
+                width: auto;
+                height: 35px;
+                font: 13px/35px arial;
+                padding: 0 10px;
+                top: 70px;
+                left: 20px; }
+            .community .inner #tab dd#tab1 .wrap .box3 .box2 {
+              height: 130px;
+              padding: 20px; }
+              .community .inner #tab dd#tab1 .wrap .box3 .box2 > h1 {
+                font-size: 14px; }
+              .community .inner #tab dd#tab1 .wrap .box3 .box2::after {
+                width: 80%;
+                top: 55px;
+                left: 20px; }
+              .community .inner #tab dd#tab1 .wrap .box3 .box2 > div {
+                width: auto;
+                height: 35px;
+                top: 70px;
+                left: 20px; }
+                .community .inner #tab dd#tab1 .wrap .box3 .box2 > div p {
+                  font: 13px/35px arial;
+                  padding: 0 10px; }
+            .community .inner #tab dd#tab1 .wrap .box3 h1 {
+              font: bold 15px/1 "맑은 고딕"; }
+          .community .inner #tab dd#tab2 {
+            margin-bottom: 100px; }
+            .community .inner #tab dd#tab2 .news {
+              height: 650px; }
+              .community .inner #tab dd#tab2 .news article {
+                width: 32%;
+                margin-right: 2%;
+                margin-bottom: 30px; }
+                .community .inner #tab dd#tab2 .news article .pic {
+                  height: 25vh; }
+                .community .inner #tab dd#tab2 .news article > h1 {
+                  padding: 5px 0 10px; }
+                  .community .inner #tab dd#tab2 .news article > h1 a {
+                    font: 16px/1 "맑은 고딕"; }
+                .community .inner #tab dd#tab2 .news article > p {
+                  font: 12px/1 "맑은 고딕"; }
+              .community .inner #tab dd#tab2 .news span a {
+                font-size: 16px; }
+            .community .inner #tab dd#tab2 .news2,
+            .community .inner #tab dd#tab2 .news3 {
+              margin: 60px 0 20px; }
+              .community .inner #tab dd#tab2 .news2 article,
+              .community .inner #tab dd#tab2 .news3 article {
+                float: left;
+                width: 32%;
+                margin-right: 2%;
+                margin-bottom: 30px; }
+                .community .inner #tab dd#tab2 .news2 article.pic1 > h2 a,
+                .community .inner #tab dd#tab2 .news3 article.pic1 > h2 a {
+                  font: bold 16px/1 "맑은 고딕"; }
+                .community .inner #tab dd#tab2 .news2 article.pic2 > h2 a,
+                .community .inner #tab dd#tab2 .news3 article.pic2 > h2 a {
+                  font: bold 16px/1 "맑은 고딕"; }
+                .community .inner #tab dd#tab2 .news2 article:nth-of-type(3),
+                .community .inner #tab dd#tab2 .news3 article:nth-of-type(3) {
+                  overflow: hidden; }
+                  .community .inner #tab dd#tab2 .news2 article:nth-of-type(3) p,
+                  .community .inner #tab dd#tab2 .news3 article:nth-of-type(3) p {
+                    font: 14px/1.4 "맑은 고딕";
+                    word-break: break-all; }
+                .community .inner #tab dd#tab2 .news2 article h1,
+                .community .inner #tab dd#tab2 .news3 article h1 {
+                  font: bold 14px/1 "맑은 고딕";
+                  padding: 15px 0;
+                  border-top: 2px solid #ccc; }
+                .community .inner #tab dd#tab2 .news2 article p,
+                .community .inner #tab dd#tab2 .news3 article p {
+                  font: 16px/1.6 "맑은 고딕"; }
+            .community .inner #tab dd#tab2 .pagination2 {
+              display: none; } }
 /* Mobile */
 @media screen and (max-width: 539px) {
-  .community .inner {
-    padding: 0 20px; }
-    .community .inner .sub_visual h1 {
-      font-size: 35px;
-      color: #777;
-      padding-top: 35px; }
-    .community .inner .sub_visual {
-      height: 90px; }
-    .community .inner dd#tab1 .wrap .search_box p {
-      display: none; }
-    .community .inner dd#tab1 .wrap .search_box select {
-      left: 0px;
-      width: 60px;
-      padding-left: 10px; }
-    .community .inner dd#tab1 .wrap .search_box input[type="search"] {
-      width: 55%; }
-    .community .inner dd#tab1 .wrap .search_box input[type="submit"] {
-      right: 0px;
-      width: 55px; }
-    .community .inner dd#tab1 .wrap table tr th {
-      padding: 10px 0;
-      font-size: 12px; }
-      .community .inner dd#tab1 .wrap table tr th:first-child {
-        padding-left: 15px; }
-      .community .inner dd#tab1 .wrap table tr th:last-child {
-        padding-right: 15px;
-        display: none; }
-    .community .inner dd#tab1 .wrap table tr td {
-      padding: 20px 10px; }
-      .community .inner dd#tab1 .wrap table tr td a {
-        font: 13px/1.2 arial; }
-      .community .inner dd#tab1 .wrap table tr td:first-child {
-        padding-left: 15px; }
-      .community .inner dd#tab1 .wrap table tr td:last-child {
-        display: none; }
-    .community .inner dd#tab1 .wrap .pagination .numbers a {
-      width: 26px;
-      height: 26px;
-      font: 12px/26px arial; }
-    .community .inner .box3 {
-      padding-top: 50px; }
-      .community .inner .box3 span {
-        font-size: 12px;
-        padding-left: 5px; }
-      .community .inner .box3 .box1 {
-        width: 100%;
-        height: 90px;
-        padding: 10px 20px;
-        margin-bottom: 20px; }
-        .community .inner .box3 .box1::after {
-          height: 1px;
-          top: 40px;
-          left: 20px; }
-        .community .inner .box3 .box1 a {
-          height: 30px;
-          font: bold 12px/30px arial;
-          top: 50px;
-          left: 20px; }
-      .community .inner .box3 .box2 {
-        width: 100%;
-        height: 90px;
-        padding: 10px 20px; }
-        .community .inner .box3 .box2::after {
-          height: 1px;
-          top: 40px;
-          left: 20px; }
-        .community .inner .box3 .box2 > div {
-          height: 30px;
-          top: 50px;
-          left: 20px; }
-          .community .inner .box3 .box2 > div p {
-            font: bold 13px/30px arial; }
-      .community .inner .box3 h1 {
-        font: bold 14px/1 "맑은 고딕"; } }
+  .community {
+    padding: 10px 0 150px; }
+    .community .inner #tab {
+      height: 1100px; }
+      .community .inner #tab dt {
+        height: 40px;
+        top: 30px; }
+        .community .inner #tab dt a {
+          font: bold 12px/40px "Roboto"; }
+      .community .inner #tab dd {
+        margin-top: 50px; }
+        .community .inner #tab dd#tab1 .wrap .search_box {
+          height: 45px; }
+          .community .inner #tab dd#tab1 .wrap .search_box select {
+            right: 225px;
+            width: 50px;
+            height: 30px;
+            padding-left: 10px;
+            font-size: 10px; }
+          .community .inner #tab dd#tab1 .wrap .search_box p {
+            display: none; }
+          .community .inner #tab dd#tab1 .wrap .search_box input[type="search"] {
+            width: 160px;
+            height: 30px;
+            right: 62px; }
+          .community .inner #tab dd#tab1 .wrap .search_box input[type="submit"] {
+            top: 0px;
+            width: 60px;
+            height: 30px;
+            font: bold 11px/30px "Roboto";
+            right: 0px; }
+        .community .inner #tab dd#tab1 .wrap table {
+          padding-top: 30px; }
+          .community .inner #tab dd#tab1 .wrap table tr th {
+            padding: 17px;
+            font-size: 11px;
+            color: #666; }
+            .community .inner #tab dd#tab1 .wrap table tr th:last-child {
+              display: none; }
+          .community .inner #tab dd#tab1 .wrap table tr td {
+            padding: 15px;
+            font-size: 12px;
+            font-weight: normal; }
+            .community .inner #tab dd#tab1 .wrap table tr td:first-child {
+              padding-left: 15px; }
+            .community .inner #tab dd#tab1 .wrap table tr td:last-child {
+              display: none; }
+            .community .inner #tab dd#tab1 .wrap table tr td a {
+              font-size: 11px; }
+        .community .inner #tab dd#tab1 .wrap .pagination {
+          margin: 20px 0; }
+          .community .inner #tab dd#tab1 .wrap .pagination a {
+            width: 25px;
+            height: 25px;
+            font: bold 12px/25px arial; }
+        .community .inner #tab dd#tab1 .wrap .box3 {
+          padding-top: 20px; }
+          .community .inner #tab dd#tab1 .wrap .box3 .box1 {
+            width: 100%;
+            height: 100px;
+            margin-bottom: 15px; }
+            .community .inner #tab dd#tab1 .wrap .box3 .box1 > h1 {
+              font-size: 13px; }
+            .community .inner #tab dd#tab1 .wrap .box3 .box1 span {
+              font-size: 11px; }
+            .community .inner #tab dd#tab1 .wrap .box3 .box1::after {
+              width: 85%;
+              top: 50px; }
+            .community .inner #tab dd#tab1 .wrap .box3 .box1 a {
+              height: 30px;
+              font: 11px/30px arial;
+              top: 60px; }
+          .community .inner #tab dd#tab1 .wrap .box3 .box2 {
+            width: 100%;
+            height: 100px; }
+            .community .inner #tab dd#tab1 .wrap .box3 .box2 > h1 {
+              font-size: 13px; }
+            .community .inner #tab dd#tab1 .wrap .box3 .box2::after {
+              width: 85%;
+              top: 50px; }
+            .community .inner #tab dd#tab1 .wrap .box3 .box2 > div {
+              height: 30px;
+              top: 60px; }
+              .community .inner #tab dd#tab1 .wrap .box3 .box2 > div p {
+                font: 11px/30px arial; }
+          .community .inner #tab dd#tab1 .wrap .box3 h1 {
+            font: bold 13px/1 "맑은 고딕"; }
+        .community .inner #tab dd#tab2 {
+          margin-bottom: 100px; }
+          .community .inner #tab dd#tab2 .news {
+            height: 600px; }
+            .community .inner #tab dd#tab2 .news article {
+              width: 100%;
+              margin-right: 0%;
+              margin-bottom: 20px; }
+              .community .inner #tab dd#tab2 .news article:nth-of-type(2n) {
+                display: none; }
+              .community .inner #tab dd#tab2 .news article .picbox .pic {
+                height: 20vh; }
+              .community .inner #tab dd#tab2 .news article > h1 {
+                padding: 0 0 10px; }
+                .community .inner #tab dd#tab2 .news article > h1 a {
+                  font: 15px/1 "맑은 고딕"; }
+              .community .inner #tab dd#tab2 .news article > p {
+                font: 12px/1 "맑은 고딕"; }
+            .community .inner #tab dd#tab2 .news span a {
+              font-size: 16px; }
+          .community .inner #tab dd#tab2 .news2,
+          .community .inner #tab dd#tab2 .news3 {
+            width: 100%;
+            height: 20vh;
+            margin: 60px 0 100px; }
+            .community .inner #tab dd#tab2 .news2 article,
+            .community .inner #tab dd#tab2 .news3 article {
+              float: none;
+              width: 100%;
+              height: 100%;
+              margin-right: 0px;
+              margin-bottom: 8px; }
+              .community .inner #tab dd#tab2 .news2 article.pic1 > h2 a,
+              .community .inner #tab dd#tab2 .news3 article.pic1 > h2 a {
+                font: bold 14px/1 "맑은 고딕"; }
+              .community .inner #tab dd#tab2 .news2 article.pic2 > h2 a,
+              .community .inner #tab dd#tab2 .news3 article.pic2 > h2 a {
+                font: bold 14px/1 "맑은 고딕"; }
+              .community .inner #tab dd#tab2 .news2 article:nth-of-type(3),
+              .community .inner #tab dd#tab2 .news3 article:nth-of-type(3) {
+                display: none; }
+              .community .inner #tab dd#tab2 .news2 article h1,
+              .community .inner #tab dd#tab2 .news3 article h1 {
+                font: bold 12px/1 "맑은 고딕";
+                padding: 5px 0; }
+              .community .inner #tab dd#tab2 .news2 article p,
+              .community .inner #tab dd#tab2 .news3 article p {
+                font: 13px/1 "맑은 고딕"; }
+              .community .inner #tab dd#tab2 .news2 article:hover .pic,
+              .community .inner #tab dd#tab2 .news3 article:hover .pic {
+                transform: scale(1.1); }
+          .community .inner #tab dd#tab2 .pagination2 {
+            display: none; } }
 .youtube .inner {
   padding: 100px 0 200px; }
   .youtube .inner #vidGallery {

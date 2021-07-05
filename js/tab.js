@@ -31,3 +31,4 @@ function activation(el) {
         enableClick = true;
     });
 }
+

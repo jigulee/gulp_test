@@ -1003,7 +1003,7 @@ textarea {
           transition: 0.5s; }
         .defartment .inner .wrap .div_tree1 .pic5 .txt a:hover .fa-long-arrow-alt-right {
           transform: translateX(10px); }
-    .defartment .inner .wrap .division .div_tree2 {
+    .defartment .inner .wrap .division {
       position: absolute;
       top: -9999px;
       opacity: 0; }

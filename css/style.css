@@ -686,10 +686,6 @@ textarea {
 @media screen and (max-width: 539px) {
   #sub_header {
     padding-top: 10px; }
-    #sub_header .inner h1 {
-      padding-bottom: 15px; }
-      #sub_header .inner h1 a {
-        font-size: 30px; }
     #sub_header .inner .wrap .menuMo {
       opacity: 1; }
       #sub_header .inner .wrap .menuMo > h1 {
@@ -709,6 +705,12 @@ textarea {
         color: #999; }
       #sub_header .inner .wrap .btnCall.on::before {
         top: calc(50% - 2px); }
+
+  .content .inner .sub_visual h1 {
+    font-size: 40px;
+    padding-top: 30px; }
+  .content .inner .sub_visual {
+    height: 100px; }
 
   /*footer layout*/
   #sub_footer .upper {
@@ -752,38 +754,62 @@ textarea {
       content: "";
       display: block;
       clear: both; }
-    .defartment .inner .wrap .pic1 h1 {
-      font: 32px/1 arial;
+    .defartment .inner .wrap .div_tree1 .pic1 > h1 {
+      font: bold 35px/1 "Roboto";
       color: #222;
+      letter-spacing: 1px;
       text-align: center;
-      margin-bottom: 5px; }
-    .defartment .inner .wrap .pic1 p {
-      font: 14px/1 arial;
+      margin-bottom: 10px; }
+    .defartment .inner .wrap .div_tree1 .pic1 p {
+      font: bold 14px/1 "Roboto";
       color: #555;
+      letter-spacing: 1px;
       text-align: center;
       margin-bottom: 30px; }
-    .defartment .inner .wrap .pic1 .pic {
+    .defartment .inner .wrap .div_tree1 .pic1 .pic {
       float: left;
       width: 50%;
       height: 330px;
-      background: url(../img/people13.jpg) no-repeat center/cover;
-      position: relative; }
-      .defartment .inner .wrap .pic1 .pic div {
+      position: relative;
+      cursor: pointer; }
+      .defartment .inner .wrap .div_tree1 .pic1 .pic::before {
+        content: "";
+        display: block;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background: url(../img/people13.jpg) no-repeat center/cover; }
+      .defartment .inner .wrap .div_tree1 .pic1 .pic::after {
+        content: "";
+        display: block;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background: linear-gradient(130deg, rgba(200, 250, 150, 0.3), rgba(173, 216, 230, 0.9));
+        opacity: 0;
+        transition: all 0.5s; }
+      .defartment .inner .wrap .div_tree1 .pic1 .pic div {
         width: 150px;
         position: absolute;
         bottom: 10px;
-        right: 0; }
-        .defartment .inner .wrap .pic1 .pic div h2 {
+        right: 0;
+        z-index: 3; }
+        .defartment .inner .wrap .div_tree1 .pic1 .pic div h2 {
           font: 17px/1 arial;
-          color: #333;
+          color: #555;
           text-align: center;
           margin-bottom: 5px; }
-        .defartment .inner .wrap .pic1 .pic div span {
+        .defartment .inner .wrap .div_tree1 .pic1 .pic div span {
           display: block;
           font: 14px/1 arial;
-          color: #555;
+          letter-spacing: 1px;
+          color: #777;
           text-align: center; }
-    .defartment .inner .wrap .pic1 .txt {
+    .defartment .inner .wrap .div_tree1 .pic1 .txt {
       float: left;
       width: 50%;
       height: 330px;
@@ -791,159 +817,192 @@ textarea {
       margin-bottom: 100px;
       padding: 40px 35px;
       box-sizing: border-box; }
-      .defartment .inner .wrap .pic1 .txt span {
+      .defartment .inner .wrap .div_tree1 .pic1 .txt span {
         display: block;
-        font: 18px/1 arial;
+        font: bold 18px/1 "Roboto";
         color: #78909c;
-        margin-bottom: 10px; }
-      .defartment .inner .wrap .pic1 .txt p {
-        font: 15px/1.6 arial;
-        color: #666;
-        letter-spacing: 1px;
-        text-align: left;
-        word-break: break-all; }
-      .defartment .inner .wrap .pic1 .txt a {
+        margin-bottom: 20px; }
+      .defartment .inner .wrap .div_tree1 .pic1 .txt p {
+        font: 13px/1.8 arial;
+        color: #9ea7aa;
+        text-align: left; }
+      .defartment .inner .wrap .div_tree1 .pic1 .txt a {
         display: block;
-        width: 150px;
+        width: 160px;
         height: 38px;
-        font: bold 14px/38px "맑은 고딕";
+        font: bold 13px/38px "Roboto";
+        letter-spacing: 1px;
         background: #78909c;
         border-radius: 30px;
         margin: 0 auto;
         text-align: center;
         color: #fff; }
-        .defartment .inner .wrap .pic1 .txt a .fa-long-arrow-alt-right {
+        .defartment .inner .wrap .div_tree1 .pic1 .txt a .fa-long-arrow-alt-right {
           padding-left: 10px;
           transition: 0.5s; }
-        .defartment .inner .wrap .pic1 .txt a:hover .fa-long-arrow-alt-right {
+        .defartment .inner .wrap .div_tree1 .pic1 .txt a:hover .fa-long-arrow-alt-right {
           transform: translateX(10px); }
-    .defartment .inner .wrap .pic2 h1,
-    .defartment .inner .wrap .pic3 h1,
-    .defartment .inner .wrap .pic4 h1 {
-      font: 20px/1 arial;
-      margin-bottom: 30px;
+    .defartment .inner .wrap .div_tree1 .pic1:hover .pic::after {
+      opacity: 0.8; }
+    .defartment .inner .wrap .div_tree1 .pic2::after,
+    .defartment .inner .wrap .div_tree1 .pic3::after,
+    .defartment .inner .wrap .div_tree1 .pic4::after {
+      content: "";
+      display: block;
+      clear: both; }
+    .defartment .inner .wrap .div_tree1 .pic2 > h1,
+    .defartment .inner .wrap .div_tree1 .pic3 > h1,
+    .defartment .inner .wrap .div_tree1 .pic4 > h1 {
+      font: bold 20px/1 "Roboto";
+      color: #222;
+      letter-spacing: 1px;
+      margin-bottom: 20px;
       text-align: center; }
-    .defartment .inner .wrap .pic2 article,
-    .defartment .inner .wrap .pic3 article,
-    .defartment .inner .wrap .pic4 article {
+    .defartment .inner .wrap .div_tree1 .pic2 article,
+    .defartment .inner .wrap .div_tree1 .pic3 article,
+    .defartment .inner .wrap .div_tree1 .pic4 article {
       float: left;
       width: 380px;
       margin-right: 20px;
       background: #f5f5f5;
       padding: 15px;
       box-sizing: border-box;
-      margin-bottom: 80px; }
-      .defartment .inner .wrap .pic2 article .pic,
-      .defartment .inner .wrap .pic3 article .pic,
-      .defartment .inner .wrap .pic4 article .pic {
+      margin-bottom: 100px; }
+      .defartment .inner .wrap .div_tree1 .pic2 article .pic,
+      .defartment .inner .wrap .div_tree1 .pic3 article .pic,
+      .defartment .inner .wrap .div_tree1 .pic4 article .pic {
         height: 180px;
         margin: 0 auto;
-        margin-bottom: 10px; }
-      .defartment .inner .wrap .pic2 article .txt,
-      .defartment .inner .wrap .pic3 article .txt,
-      .defartment .inner .wrap .pic4 article .txt {
+        margin-bottom: 10px;
+        overflow: hidden;
+        cursor: pointer;
+        position: relative; }
+        .defartment .inner .wrap .div_tree1 .pic2 article .pic::after,
+        .defartment .inner .wrap .div_tree1 .pic3 article .pic::after,
+        .defartment .inner .wrap .div_tree1 .pic4 article .pic::after {
+          content: "";
+          display: block;
+          width: 100%;
+          height: 100%;
+          position: absolute;
+          top: 0;
+          left: 0;
+          background: linear-gradient(130deg, rgba(200, 250, 150, 0.3), rgba(173, 216, 230, 0.9));
+          opacity: 0;
+          transition: all 0.5s; }
+      .defartment .inner .wrap .div_tree1 .pic2 article .txt,
+      .defartment .inner .wrap .div_tree1 .pic3 article .txt,
+      .defartment .inner .wrap .div_tree1 .pic4 article .txt {
         width: 100%; }
-        .defartment .inner .wrap .pic2 article .txt h2,
-        .defartment .inner .wrap .pic3 article .txt h2,
-        .defartment .inner .wrap .pic4 article .txt h2 {
-          font: 16px/1 arial;
+        .defartment .inner .wrap .div_tree1 .pic2 article .txt h2,
+        .defartment .inner .wrap .div_tree1 .pic3 article .txt h2,
+        .defartment .inner .wrap .div_tree1 .pic4 article .txt h2 {
+          font: 15px/1 arial;
+          color: #444;
+          letter-spacing: 1px;
           text-align: center;
           margin-bottom: 5px; }
-        .defartment .inner .wrap .pic2 article .txt p,
-        .defartment .inner .wrap .pic3 article .txt p,
-        .defartment .inner .wrap .pic4 article .txt p {
+        .defartment .inner .wrap .div_tree1 .pic2 article .txt p,
+        .defartment .inner .wrap .div_tree1 .pic3 article .txt p,
+        .defartment .inner .wrap .div_tree1 .pic4 article .txt p {
           font: 13px/1 arial;
           text-align: center;
+          color: #4ba3c7;
+          margin-bottom: 5px; }
+        .defartment .inner .wrap .div_tree1 .pic2 article .txt span,
+        .defartment .inner .wrap .div_tree1 .pic3 article .txt span,
+        .defartment .inner .wrap .div_tree1 .pic4 article .txt span {
+          font: 13px/1 arial;
           color: #9ea7aa;
-          margin-bottom: 5px; }
-        .defartment .inner .wrap .pic2 article .txt span,
-        .defartment .inner .wrap .pic3 article .txt span,
-        .defartment .inner .wrap .pic4 article .txt span {
-          font: 13px/1 arial;
-          color: #555;
           letter-spacing: 1px;
           word-break: break-all; }
-      .defartment .inner .wrap .pic2 article .sns,
-      .defartment .inner .wrap .pic3 article .sns,
-      .defartment .inner .wrap .pic4 article .sns {
+      .defartment .inner .wrap .div_tree1 .pic2 article .sns,
+      .defartment .inner .wrap .div_tree1 .pic3 article .sns,
+      .defartment .inner .wrap .div_tree1 .pic4 article .sns {
         text-align: right;
         margin-top: 10px; }
-        .defartment .inner .wrap .pic2 article .sns a,
-        .defartment .inner .wrap .pic3 article .sns a,
-        .defartment .inner .wrap .pic4 article .sns a {
+        .defartment .inner .wrap .div_tree1 .pic2 article .sns a,
+        .defartment .inner .wrap .div_tree1 .pic3 article .sns a,
+        .defartment .inner .wrap .div_tree1 .pic4 article .sns a {
           margin-left: 10px;
           color: #888;
           font-size: 15px; }
-    .defartment .inner .wrap .pic2 article:nth-of-type(1) .pic {
+      .defartment .inner .wrap .div_tree1 .pic2 article:hover .pic::after,
+      .defartment .inner .wrap .div_tree1 .pic3 article:hover .pic::after,
+      .defartment .inner .wrap .div_tree1 .pic4 article:hover .pic::after {
+        opacity: 0.8; }
+    .defartment .inner .wrap .div_tree1 .pic2 article:nth-of-type(1) .pic {
       background: url(../img/people11.jpg) no-repeat center/cover; }
-    .defartment .inner .wrap .pic2 article:nth-of-type(2) .pic {
+    .defartment .inner .wrap .div_tree1 .pic2 article:nth-of-type(2) .pic {
       background: url(../img/people7.jpg) no-repeat center/cover; }
-    .defartment .inner .wrap .pic2 article:nth-of-type(3) {
+    .defartment .inner .wrap .div_tree1 .pic2 article:nth-of-type(3) {
       margin-right: 0; }
-      .defartment .inner .wrap .pic2 article:nth-of-type(3) .pic {
+      .defartment .inner .wrap .div_tree1 .pic2 article:nth-of-type(3) .pic {
         background: url(../img/people12.jpg) no-repeat center/cover; }
-    .defartment .inner .wrap .pic3 article:nth-of-type(1) .pic {
+    .defartment .inner .wrap .div_tree1 .pic3 article:nth-of-type(1) .pic {
       background: url(../img/people9.jpg) no-repeat center/cover; }
-    .defartment .inner .wrap .pic3 article:nth-of-type(2) .pic {
+    .defartment .inner .wrap .div_tree1 .pic3 article:nth-of-type(2) .pic {
       background: url(../img/people5.jpg) no-repeat center/cover; }
-    .defartment .inner .wrap .pic3 article:nth-of-type(3) {
+    .defartment .inner .wrap .div_tree1 .pic3 article:nth-of-type(3) {
       margin-right: 0; }
-      .defartment .inner .wrap .pic3 article:nth-of-type(3) .pic {
+      .defartment .inner .wrap .div_tree1 .pic3 article:nth-of-type(3) .pic {
         background: url(../img/people6.jpg) no-repeat center/cover; }
-    .defartment .inner .wrap .pic4 article {
-      margin-bottom: 120px; }
-      .defartment .inner .wrap .pic4 article:nth-of-type(1) .pic {
+    .defartment .inner .wrap .div_tree1 .pic4 article {
+      margin-bottom: 130px; }
+      .defartment .inner .wrap .div_tree1 .pic4 article:nth-of-type(1) .pic {
         background: url(../img/people16.jpg) no-repeat center/cover; }
-      .defartment .inner .wrap .pic4 article:nth-of-type(2) .pic {
+      .defartment .inner .wrap .div_tree1 .pic4 article:nth-of-type(2) .pic {
         background: url(../img/people10.jpg) no-repeat center/cover; }
-      .defartment .inner .wrap .pic4 article:nth-of-type(3) {
+      .defartment .inner .wrap .div_tree1 .pic4 article:nth-of-type(3) {
         margin-right: 0; }
-        .defartment .inner .wrap .pic4 article:nth-of-type(3) .pic {
+        .defartment .inner .wrap .div_tree1 .pic4 article:nth-of-type(3) .pic {
           background: url(../img/people2.jpg) no-repeat center/cover; }
-    .defartment .inner .wrap .pic5 {
-      position: relative; }
-      .defartment .inner .wrap .pic5 h1 {
-        font: 32px/1 arial;
-        color: #222;
-        text-align: center;
-        margin-bottom: 5px; }
-      .defartment .inner .wrap .pic5 > p {
-        font: 14px/1 arial;
+    .defartment .inner .wrap .div_tree1 .pic5 > h1 {
+      font: bold 33px/1 "Roboto";
+      color: #222;
+      letter-spacing: 1px;
+      text-align: center;
+      margin-bottom: 10px; }
+    .defartment .inner .wrap .div_tree1 .pic5 p {
+      font: bold 14px/1 "Roboto";
+      color: #555;
+      letter-spacing: 1px;
+      text-align: center;
+      margin-bottom: 30px; }
+    .defartment .inner .wrap .div_tree1 .pic5 .pic {
+      width: 40%;
+      height: 280px;
+      float: left;
+      background: url(../img/people.jpg) no-repeat center/cover; }
+    .defartment .inner .wrap .div_tree1 .pic5 .txt {
+      float: right;
+      width: 60%;
+      height: 280px;
+      background: #f5f5f5;
+      padding: 80px 30px;
+      box-sizing: border-box; }
+      .defartment .inner .wrap .div_tree1 .pic5 .txt h2 {
+        font: bold 18px/1.4 "Roboto";
         color: #555;
         text-align: center;
+        letter-spacing: 1px;
         margin-bottom: 30px; }
-      .defartment .inner .wrap .pic5 .pic {
-        width: 40%;
-        height: 280px;
-        float: left;
-        background: url(../img/people.jpg) no-repeat center/cover; }
-      .defartment .inner .wrap .pic5 .txt {
-        float: right;
-        width: 60%;
-        height: 280px;
-        background: #f5f5f5;
-        padding: 80px 30px;
-        box-sizing: border-box; }
-        .defartment .inner .wrap .pic5 .txt h2 {
-          font: 20px/1.4 "맑은 고딕";
-          color: #333;
-          text-align: center;
-          margin-bottom: 30px; }
-        .defartment .inner .wrap .pic5 .txt a {
-          display: block;
-          width: 140px;
-          height: 38px;
-          font: bold 17px/38px "맑은 고딕";
-          background: #78909c;
-          border-radius: 30px;
-          margin: 0 auto;
-          text-align: center;
-          color: #fff; }
-          .defartment .inner .wrap .pic5 .txt a .fa-long-arrow-alt-right {
-            padding-left: 10px;
-            transition: 0.5s; }
-          .defartment .inner .wrap .pic5 .txt a:hover .fa-long-arrow-alt-right {
-            transform: translateX(10px); }
+      .defartment .inner .wrap .div_tree1 .pic5 .txt a {
+        display: block;
+        width: 140px;
+        height: 35px;
+        font: bold 17px/35px "Roboto";
+        color: #fff;
+        text-align: center;
+        letter-spacing: 1px;
+        background: #78909c;
+        border-radius: 30px;
+        margin: 0 auto; }
+        .defartment .inner .wrap .div_tree1 .pic5 .txt a .fa-long-arrow-alt-right {
+          padding-left: 10px;
+          transition: 0.5s; }
+        .defartment .inner .wrap .div_tree1 .pic5 .txt a:hover .fa-long-arrow-alt-right {
+          transform: translateX(10px); }
     .defartment .inner .wrap .division .div_tree2 {
       position: absolute;
       top: -9999px;
@@ -951,143 +1010,155 @@ textarea {
 
 /* Tablet */
 @media screen and (max-width: 1179px) {
-  .defartment {
-    padding: 120px 0px 150px; }
-    .defartment .inner .wrap p {
-      font: 30px/1 arial;
-      margin: 5px 0;
-      border-top: 2px solid #222;
-      padding-top: 20px; }
-    .defartment .inner .wrap .span1 {
-      font: 14px/1 arial; }
-    .defartment .inner .wrap h2 {
-      font: 15px/1 arial; }
-    .defartment .inner .wrap span {
-      font: 13px/1 arial; }
-    .defartment .inner .wrap .pic {
-      height: 250px;
-      margin-bottom: 30px; }
-    .defartment .inner .wrap .pic1 {
-      width: 330px;
-      margin-bottom: 50px; }
-      .defartment .inner .wrap .pic1 div {
-        height: 330px; }
-    .defartment .inner .wrap .pic2 {
-      margin-bottom: 40px; }
-      .defartment .inner .wrap .pic2 p {
-        font: 16px/1 arial;
-        padding: 15px;
-        margin-bottom: 15px;
-        border-color: #999; }
-      .defartment .inner .wrap .pic2 article {
-        width: calc(96% / 3);
-        margin-right: 2%; }
-        .defartment .inner .wrap .pic2 article div {
-          width: 100%;
-          height: 250px;
-          border-radius: 0; }
-    .defartment .inner .wrap .pic3 {
-      margin-bottom: 40px; }
-      .defartment .inner .wrap .pic3 article {
-        width: calc(96% / 3);
-        margin-right: 2%; }
-        .defartment .inner .wrap .pic3 article div {
-          width: 100%;
-          height: 250px;
-          border-radius: 0; }
-    .defartment .inner .wrap .pic4 {
-      margin-bottom: 40px; }
-      .defartment .inner .wrap .pic4 article {
-        width: calc(96% / 3);
-        margin-right: 2%; }
-        .defartment .inner .wrap .pic4 article div {
-          width: 100%;
-          height: 250px;
-          border-radius: 0; }
-    .defartment .inner .wrap .pic5 h1 {
-      font: 30px/1 arial; }
-    .defartment .inner .wrap .pic5 a {
-      width: 120px;
-      height: 35px;
-      font: 15px/35px arial; } }
+  .defartment .inner .wrap {
+    padding-top: 50px; }
+    .defartment .inner .wrap .div_tree1 .pic1 {
+      margin-bottom: 100px; }
+      .defartment .inner .wrap .div_tree1 .pic1 h1 {
+        font-size: 30px;
+        margin-bottom: 5px; }
+      .defartment .inner .wrap .div_tree1 .pic1 p {
+        margin-bottom: 15px; }
+      .defartment .inner .wrap .div_tree1 .pic1 .pic {
+        float: none;
+        width: 100%;
+        height: 50vh; }
+        .defartment .inner .wrap .div_tree1 .pic1 .pic::before {
+          background: url(../img/people13-1.jpg) no-repeat center/cover; }
+      .defartment .inner .wrap .div_tree1 .pic1 .txt {
+        float: none;
+        width: 100%;
+        height: auto;
+        margin-bottom: 60px;
+        padding: 20px 20px 25px; }
+        .defartment .inner .wrap .div_tree1 .pic1 .txt span {
+          font: bold 15px/1.4 "Roboto";
+          letter-spacing: 1px;
+          margin-bottom: 10px; }
+        .defartment .inner .wrap .div_tree1 .pic1 .txt p {
+          font: 13px/1.4 arial;
+          margin-bottom: 20px; }
+    .defartment .inner .wrap .div_tree1 .pic2 article,
+    .defartment .inner .wrap .div_tree1 .pic3 article,
+    .defartment .inner .wrap .div_tree1 .pic4 article {
+      width: 32%;
+      margin-right: 2%;
+      padding: 10px;
+      margin-bottom: 80px; }
+      .defartment .inner .wrap .div_tree1 .pic2 article .pic,
+      .defartment .inner .wrap .div_tree1 .pic3 article .pic,
+      .defartment .inner .wrap .div_tree1 .pic4 article .pic {
+        height: 25vh; }
+      .defartment .inner .wrap .div_tree1 .pic2 article .txt h2,
+      .defartment .inner .wrap .div_tree1 .pic3 article .txt h2,
+      .defartment .inner .wrap .div_tree1 .pic4 article .txt h2 {
+        font-size: 13px; }
+      .defartment .inner .wrap .div_tree1 .pic2 article .txt p,
+      .defartment .inner .wrap .div_tree1 .pic3 article .txt p,
+      .defartment .inner .wrap .div_tree1 .pic4 article .txt p {
+        font-size: 12px; }
+      .defartment .inner .wrap .div_tree1 .pic2 article .txt span,
+      .defartment .inner .wrap .div_tree1 .pic3 article .txt span,
+      .defartment .inner .wrap .div_tree1 .pic4 article .txt span {
+        font: 12px/1 arial; }
+    .defartment .inner .wrap .div_tree1 .pic5 {
+      margin-top: 30px; }
+      .defartment .inner .wrap .div_tree1 .pic5 h1 {
+        font-size: 30px;
+        margin-bottom: 5px; }
+      .defartment .inner .wrap .div_tree1 .pic5 p {
+        margin-bottom: 15px; }
+      .defartment .inner .wrap .div_tree1 .pic5 .txt h2 {
+        font-size: 16px; }
+      .defartment .inner .wrap .div_tree1 .pic5 .txt a {
+        font-size: 15px;
+        letter-spacing: 2px; } }
 /* Mobile*/
 @media screen and (max-width: 539px) {
   .defartment {
-    padding: 20px 0px 280px; }
-    .defartment .inner .wrap {
-      position: relative; }
-      .defartment .inner .wrap p {
-        font: 32px/1 arial;
-        margin: 10px 0;
-        border-top: 0; }
-      .defartment .inner .wrap .span1 {
-        font: 14px/1.2 arial;
-        margin-bottom: 50px; }
-      .defartment .inner .wrap .pic {
-        height: 200px;
-        margin-bottom: 20px; }
-      .defartment .inner .wrap .pic5 {
-        width: 100%;
-        position: absolute;
-        bottom: -180px;
-        left: 0; }
-        .defartment .inner .wrap .pic5 h1 {
-          font: 25px/1 arial;
-          border-top: 2px solid #111;
-          padding: 20px 0; }
-        .defartment .inner .wrap .pic5 a {
-          width: 120px;
-          height: 35px;
-          font: 15px/35px arial; }
-          .defartment .inner .wrap .pic5 a .fa-long-arrow-alt-right {
-            padding-left: 5px; }
-      .defartment .inner .wrap .div_tree1 {
-        display: none; }
-      .defartment .inner .wrap .division .div_tree2 {
-        position: relative;
-        top: 0;
-        opacity: 1; }
-        .defartment .inner .wrap .division .div_tree2 li span {
+    padding: 20px 0px 120px; }
+    .defartment .inner .wrap h1 {
+      font: bold 25px/1 "Roboto";
+      color: #333;
+      text-align: center;
+      margin-bottom: 5px; }
+    .defartment .inner .wrap p {
+      font: bold 14px/1 "Roboto";
+      color: #555;
+      text-align: center;
+      margin-bottom: 40px; }
+    .defartment .inner .wrap .div_tree1 {
+      display: none; }
+    .defartment .inner .wrap .division .div_tree2 {
+      position: relative;
+      top: 0;
+      opacity: 1;
+      margin-bottom: 80px; }
+      .defartment .inner .wrap .division .div_tree2 li span {
+        display: block;
+        width: 50%;
+        height: 40px;
+        background: #1976d2;
+        margin-bottom: 20px;
+        border-radius: 2px;
+        font: bold 12px/40px "Roboto";
+        letter-spacing: 1px;
+        text-align: center;
+        color: #fff; }
+        .defartment .inner .wrap .division .div_tree2 li span::after {
+          content: "";
           display: block;
-          width: 45%;
-          height: 50px;
-          background: #1976d2;
-          margin-bottom: 20px;
-          border-radius: 3px;
-          font: 14px/50px arial;
-          text-align: center;
-          color: #111; }
-          .defartment .inner .wrap .division .div_tree2 li span::after {
-            content: "";
-            display: block;
-            width: 1px;
-            height: calc(70px * 9 - 25px);
-            position: absolute;
-            top: 50px;
-            left: 50px;
-            background: #002f6c; }
-        .defartment .inner .wrap .division .div_tree2 ul span {
-          background: #42a5f5;
-          transform: translateX(70px);
-          position: relative; }
-          .defartment .inner .wrap .division .div_tree2 ul span::after {
-            height: calc(70px * 3 - 23px); }
-          .defartment .inner .wrap .division .div_tree2 ul span::before {
-            content: "";
-            display: block;
-            width: 20px;
-            height: 1px;
-            position: absolute;
-            top: 25px;
-            left: -20px;
-            background: #002f6c; }
-        .defartment .inner .wrap .division .div_tree2 ul ul span {
-          background: #e3f2fd;
-          transform: translateX(140px); }
-          .defartment .inner .wrap .division .div_tree2 ul ul span::after {
-            display: none; }
-        .defartment .inner .wrap .division .div_tree2 .manager span {
-          background: #90caf9; } }
+          width: 1px;
+          height: calc(60px * 9 - 15px);
+          position: absolute;
+          top: 40px;
+          left: 50px;
+          background: #002f6c; }
+      .defartment .inner .wrap .division .div_tree2 ul span {
+        background: #42a5f5;
+        color: #f5f5f5;
+        transform: translateX(70px);
+        position: relative; }
+        .defartment .inner .wrap .division .div_tree2 ul span::after {
+          height: calc(60px * 3 - 14px); }
+        .defartment .inner .wrap .division .div_tree2 ul span::before {
+          content: "";
+          display: block;
+          width: 20px;
+          height: 1px;
+          position: absolute;
+          top: 25px;
+          left: -20px;
+          background: #002f6c; }
+      .defartment .inner .wrap .division .div_tree2 ul ul span {
+        color: #555;
+        background: #e3f2fd;
+        transform: translateX(140px); }
+        .defartment .inner .wrap .division .div_tree2 ul ul span::after {
+          display: none; }
+      .defartment .inner .wrap .division .div_tree2 .manager span {
+        background: #90caf9; }
+    .defartment .inner .wrap h2 {
+      font: bold 22px/1 "Roboto";
+      color: #333;
+      text-align: center;
+      margin-bottom: 20px; }
+    .defartment .inner .wrap a {
+      display: block;
+      width: 130px;
+      height: 35px;
+      font: bold 13px/35px "Roboto";
+      letter-spacing: 1px;
+      background: #333;
+      border-radius: 30px;
+      margin: 0 auto;
+      text-align: center;
+      color: #fff; }
+      .defartment .inner .wrap a .fa-long-arrow-alt-right {
+        padding-left: 10px;
+        transition: 0.5s; }
+      .defartment .inner .wrap a:hover .fa-long-arrow-alt-right {
+        transform: translateX(10px); } }
 /*community layout*/
 .community {
   padding: 10px 0 100px; }

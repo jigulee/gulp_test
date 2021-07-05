@@ -882,12 +882,6 @@
 	#sub_header {
 		padding-top: 10px;
 		.inner {
-			h1 {
-				padding-bottom: 15px;
-				a {
-					font-size: 30px;
-				}
-			}
 			.wrap {
 				.menuMo {
 					opacity: 1;
@@ -918,6 +912,18 @@
 						top: calc(50% - 2px);
 					}
 				}
+			}
+		}
+	}
+
+	.content {
+		.inner {
+			.sub_visual h1 {
+				font-size: 40px;
+				padding-top: 30px;
+			}
+			.sub_visual {
+				height: 100px;
 			}
 		}
 	}
